@@ -12,9 +12,14 @@ services:
     container_name: practice2-springboot
     ports:
       - 8080:8080
+    depends_on:
+      - practice-1
   nginx:
     image: nginx
     container_name: public-nginx
     ports:
       - 81:80
+    depends_on:
+      - practice-1
+      - practice-2
 
