@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  practice-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pratice-html-css
+    ports:
+      - 80:80
+  practice-2:
+    image: v2
+    container_name: practice2-springboot
+    ports:
+      - 8080:8080
+  nginx:
+    image: nginx
+    container_name: public-nginx
+    ports:
+      - 81:80
+
